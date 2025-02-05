@@ -3,8 +3,6 @@ layout: soon
 permalink: /
 ---
 
-# Coming soon
+# World-class software engineering
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus.
-Some call to action.
-
+We build simple, secure, stable, and scalable tools freeing you to focus on the more important aspects of your business. We make the extraordinary commonplace.
