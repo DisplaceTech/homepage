@@ -27,7 +27,7 @@ $content-min-margin: 20px !default;
 
 $large-form-factor-width: 769px !default;
 
-@import "minireset",
+@import "vendor/minireset",
         "base",
         "forms",
         "layout";
