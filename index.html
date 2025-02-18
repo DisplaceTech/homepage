@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displace Technologies, LLC</title>
+    <link rel="icon" type="image/svg+xml" href="logo-black.svg" id="favicon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #030303;
+            --background-color: #fefefe;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #fefefe;
+                --secondary-color: #168FD8;
+                --background-color: #030303;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Geist', sans-serif;
+            color: var(--primary-color);
+            background: linear-gradient(315deg, var(--background-color) 50%, var(--background-color) 0%, var(--secondary-color) 200%);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #E25041;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Funnel Display', serif;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            margin: 4rem 0;
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <img src="logo-black.svg" alt="Displace Technologies Logo" class="logo" id="logo">
+            <h1>Displace Technologies, LLC</h1>
+        </section>
+
+        <section id="about">
+            <h2>World-class software engineering</h2>
+            <p>We build simple, secure, stable, and scalable tools to free your focus for the more important aspects of your business.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <p>Interested in learning more? Contact us at: <a href="mailto:&#115;&#097;&#108;&#101;&#115;&#064;&#100;&#105;&#115;&#112;&#108;&#097;&#099;&#101;&#046;&#116;&#101;&#099;&#104;">&#115;&#097;&#108;&#101;&#115;&#064;&#100;&#105;&#115;&#112;&#108;&#097;&#099;&#101;&#046;&#116;&#101;&#099;&#104;</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Displace Technologies, LLC. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle dark mode for logo and favicon
+        function updateImages() {
+            const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const logo = document.getElementById('logo');
+            const favicon = document.getElementById('favicon');
+            
+            logo.src = isDarkMode ? 'logo.svg' : 'logo-black.svg';
+            favicon.href = isDarkMode ? 'logo.svg' : 'logo-black.svg';
+        }
+
+        // Initial update
+        updateImages();
+
+        // Listen for system color scheme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateImages);
+    </script>
+</body>
+</html>
